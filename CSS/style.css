@@ -1,0 +1,373 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.mainContainer {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 150px auto 150px;
+  grid-template-columns: 384px ;
+  grid-template-areas:
+    "header header header header"
+    "aside main main main"
+    "footer footer footer footer";
+  padding: 20px;
+}
+
+header {
+  grid-area: header;
+  /* background-color: aqua; */
+}
+
+.headerContainer > .part1 > img {
+  height: 100px;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.headerContainer > .part2 select {
+  font-weight: 900;
+  border: none;
+}
+
+/* .headerContainer> .menuPart> select{
+   margin-right: 20px;
+} */
+
+.headerContainer > .part2 {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.headerContainer > .part2 input {
+  border: none;
+  background-color: white;
+  font-weight: 900;
+}
+
+.headerContainer > .part3 input {
+  text-transform: uppercase;
+  padding: 5px 30px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.headerContainer > .part3 input:active {
+  background-color: brown;
+}
+
+/* Sidebar */
+aside {
+  grid-area: aside;
+  /* background-color: red; */
+}
+
+.asideContainer .part1 ul li {
+  height: 100%;
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.asideContainer .part1 {
+  height: 350px;
+  filter: drop-shadow(0px 0px 15px lightblue);
+  background-color: white;
+}
+
+.asideContainer .firstChild {
+  background-color: red;
+  color: white;
+}
+
+/* .asideContainer ul li:hover{
+    background-color: #d3d3d3;
+    border-left: 3px solid red;
+} */
+.asideContainer li:not(.firstChild):hover {
+  background-color: #d3d3d3;
+  border-left: 3px solid red;
+}
+
+/* Aside container part2 */
+
+.asideContainer .part2 img {
+  height: 153px;
+}
+
+.asideContainer .part2 {
+  height: 450px;
+  background-color: white;
+  margin-top: 20px;
+  filter: drop-shadow(0px 0px 15px lightblue);
+}
+
+.asideContainer .heading {
+  padding: 10px;
+  font-weight: 700;
+}
+
+.asideContainer .part2Con {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.asideContainer .part2 img {
+  border-radius: 10px;
+}
+
+.asideContainer .part2 .sizes {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.asideContainer .part2 .sizes .small,
+.large,
+.medium {
+  height: 30px;
+  width: 30px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.asideContainer .part2 .sizes .small {
+  background-color: red;
+  font-weight: 600;
+  color: white;
+}
+
+.asideContainer .part2 .rs {
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.asideContainer .part2 p {
+  text-align: center;
+}
+
+.asideContainer .part3 {
+  height: 600px;
+  width: 100%;
+  /*Optional if we set height and vice versa*/
+  /* background-color: yellow; */
+  margin-top: 20px;
+  background-image: url("https://i.pinimg.com/564x/12/ac/60/12ac606896dfc98f4806b7acababed67.jpg");
+  background-position: center center;
+  background-size: contain;
+}
+
+/* Footer */
+
+footer {
+  grid-area: footer;
+}
+
+.footerContainer .part1 img {
+  height: 60px;
+}
+
+.footerContainer .part1 {
+  margin-left: -200px;
+}
+
+.footerContainer {
+  height: 170px;
+  background-color: rgb(252, 143, 19);
+  margin-top: 10px;
+  padding: 30px 0px 20px 0px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footerContainer .part1 p {
+  margin-top: 10px;
+  color: white;
+}
+
+.footerContainer .part2 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footerContainer .part2 p {
+  font-weight: 900;
+}
+
+.footerContainer .part2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.footerContainer .part3 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footerContainer .part3 .firstChild {
+  font-weight: 900;
+}
+
+.footerContainer .part3 .secondChild {
+  color: white;
+}
+
+.footerContainer .social i {
+  color: white;
+}
+
+/* Main  */
+
+main {
+  grid-area: main;
+  /* background-color: yellow; */
+  margin-left: 40px;
+}
+
+main .mainCon1 {
+  display: flex;
+  background-color: black;
+}
+
+main .part1 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+main .part1Heading {
+  text-transform: uppercase;
+  background-color: orangered;
+  padding: 8px 10px;
+}
+
+main .special {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+main .mainCon1 input {
+  font-size: 20px;
+  background-color: orangered;
+  color: white;
+  padding: 10px 30px;
+}
+
+/* mainCon2 */
+main .mainCon2 {
+  height: 300px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-areas:
+    "img1 img2"
+    "img1 img3";
+  gap: 10px;
+  color: white;
+}
+
+main .img1 {
+  grid-area: img1;
+  background-image: url(../IMAGES/biriyani.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+main .img2 {
+  grid-area: img2;
+  background-image: url(https://i.pinimg.com/564x/a6/08/dc/a608dca35982e969d82c9fbde3ec52a7.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main .img3 {
+  grid-area: img3;
+  background-image: url(../IMAGES/leg-piece.jpg);
+}
+main .mainCon2 p,
+strong {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+/* mainCon3 */
+
+main .mainCon3 {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+main .mainCon3 .heading {
+  background-color: orange;
+  width: 133px;
+  text-align: center;
+  padding: 5px 15px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+main .mainCon3 .para {
+  font-size: 32px;
+  font-weight: 600;
+}
+main .mainCon3 .blankbox {
+  height: 10px;
+  background-color: black;
+  width: 100px;
+  border-radius: 10px;
+}
+main .mainCon3 .Content {
+  text-align: center;
+}
+main .iconCon {
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+}
+main .iconCon img {
+  height: 40px;
+}
+main .firstimg {
+  border-bottom: 5px solid red;
+  padding-bottom: 10px;
+}
+main #firstimg {
+  height: 50px;
+}
